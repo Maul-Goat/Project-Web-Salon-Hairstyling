@@ -1,0 +1,356 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 12px 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #4e91fc;
+}
+
+.nav-link {
+  margin-right: 18px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4e91fc;
+}
+
+.nav-link.active {
+  color: #4e91fc !important;
+  font-weight: 600;
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(135deg, #e0f7fa, #e8eaf6);
+  color: #333;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.pinimg.com/736x/f3/b7/26/f3b7267866a63a2f48407d1f4dbd79ab.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-section .btn-primary {
+  background-color: #4e91fc;
+  border: none;
+  padding: 10px 25px;
+  box-shadow: 0 4px 8px rgba(78, 145, 252, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(78, 145, 252, 0.4);
+}
+
+/* Features section */
+.features {
+  background-color: #ffffff;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 24px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #4e91fc;
+  margin-bottom: 20px;
+}
+
+/* Section titles */
+.section-title {
+  font-weight: 700;
+  color: #333;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #4e91fc;
+  border-radius: 3px;
+}
+
+/* Services Cards */
+.services-section {
+  padding: 80px 0;
+}
+
+.service-card {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon {
+  font-size: 2.2rem;
+  color: #4e91fc;
+  margin: 20px 0;
+}
+
+.service-price {
+  font-weight: 600;
+  color: #4e91fc;
+  margin-top: 15px;
+}
+
+/* Gallery */
+.gallery-container {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.gallery-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: calc(250px * 12); /* 12 items (6 original + 6 duplicates) */
+}
+
+.gallery-item {
+  width: 250px;
+  padding: 0 15px;
+  flex-shrink: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 6)); /* Move by half the total width */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-container {
+    height: 280px;
+  }
+  
+  .gallery-item img {
+    height: 280px;
+  }
+}
+
+/* Testimonial section */
+.testimonial-section {
+  background-color: #f5f7ff;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.testimonial-text::before,
+.testimonial-text::after {
+  content: '"';
+  font-size: 2rem;
+  color: #4e91fc;
+  position: absolute;
+}
+
+.testimonial-text::before {
+  top: -10px;
+  left: -10px;
+}
+
+.testimonial-text::after {
+  bottom: -30px;
+  right: -10px;
+}
+
+.testimonial-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonial-name {
+  font-weight: 600;
+}
+
+.testimonial-stars {
+  color: #ffc107;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #4e91fc, #6610f2);
+  color: white;
+  padding: 80px 0;
+}
+
+.cta-section h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.cta-section .btn {
+  background-color: white;
+  color: #4e91fc;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-section .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e1e;
+  padding: 60px 0 20px;
+  color: white;
+  font-size: 14px;
+}
+
+footer h5 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4e91fc;
+}
+
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.1);
+  color: white;
+  margin: 0 8px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #4e91fc;
+  transform: translateY(-3px);
+  color: white;
+}
+
+/* Button styling */
+.btn {
+  border-radius: 30px;
+  padding: 8px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary {
+  border-color: #4e91fc;
+  color: #4e91fc;
+}
+
+.btn-outline-primary:hover {
+  background-color: #4e91fc;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .gallery-container {
+    height: 280px;
+  }
+  
+  .gallery-item img {
+    height: 280px;
+  }
+}
